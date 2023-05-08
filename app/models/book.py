@@ -1,5 +1,4 @@
 from app import db
-from .author import Author
 
 
 class Book(db.Model):

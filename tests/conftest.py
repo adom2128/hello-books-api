@@ -35,4 +35,7 @@ def two_saved_books(app):
                          description="i luv 2 climb rocks")
 
     db.session.add_all([ocean_book, mountain_book])
+    # Alternatively, we could do
+    # db.session.add(ocean_book)
+    # db.session.add(mountain_book)
     db.session.commit()
