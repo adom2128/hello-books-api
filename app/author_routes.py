@@ -16,7 +16,7 @@ def create_author():
     db.session.commit()
 
     return make_response(jsonify(f"Author {new_author.name}"
-                                 "successfully created"), 201)
+                                 " successfully created"), 201)
 
 
 @authors_bp.route("", methods=["GET"])
