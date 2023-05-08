@@ -15,7 +15,7 @@ def create_book():
     db.session.commit()
 
     return make_response(jsonify(f"Book {new_book.title}"
-                                 "successfully created"), 201)
+                                 " successfully created"), 201)
 
 
 @books_bp.route("", methods=["GET"])
@@ -43,7 +43,7 @@ def validate_model(cls, model_id):
 
     if not model:
         abort(make_response({"message": f"{cls.__name__} {model_id}"
-                            "not found"}, 404))
+                            " not found"}, 404))
 
     return model
 

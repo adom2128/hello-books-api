@@ -1,5 +1,5 @@
 from app import db
-
+from .author import Author
 
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
