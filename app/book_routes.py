@@ -15,7 +15,7 @@ def create_book():
     db.session.commit()
 
     return make_response(jsonify(f"Book {new_book.title}"
-                                 " successfully created"), 201)
+                                 "successfully created"), 201)
 
 
 @books_bp.route("", methods=["GET"])

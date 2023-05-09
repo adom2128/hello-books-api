@@ -16,7 +16,7 @@ def create_author():
     db.session.commit()
 
     return make_response(jsonify(f"Author {new_author.name}"
-                                 " successfully created"), 201)
+                                 "successfully created"), 201)
 
 
 @authors_bp.route("", methods=["GET"])
@@ -55,3 +55,4 @@ def read_books_by_author(author_id):
     books_response = [book.to_dict() for book in author.books]
 
     return jsonify(books_response)
+
