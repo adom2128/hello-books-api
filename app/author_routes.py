@@ -43,8 +43,8 @@ def create_book(author_id):
     db.session.commit()
 
     return make_response(jsonify(f"Book {new_book.title} by"
-                                 f"{new_book.author.name}"
-                                 "successfully created"), 201)
+                                 f" {new_book.author.name}"
+                                 " successfully created"), 201)
 
 
 @authors_bp.route("/<author_id>/books", methods=["GET"])
