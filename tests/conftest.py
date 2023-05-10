@@ -3,6 +3,9 @@ from app import create_app
 from app import db
 from flask.signals import request_finished
 from app.models.book import Book
+from app.models.author import Author
+from app.models.bookgenre import BookGenre
+from app.models.genre import Genre
 
 
 @pytest.fixture

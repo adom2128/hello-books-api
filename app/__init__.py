@@ -25,11 +25,6 @@ def create_app(test_config=None):
     db.init_app(app)
     migrate.init_app(app, db)
 
-    from app.models.book import Book
-    from app.models.author import Author
-    from app.models.genre import Genre
-    from app.models.bookgenre import BookGenre
-
     from .book_routes import books_bp
     app.register_blueprint(books_bp)
 

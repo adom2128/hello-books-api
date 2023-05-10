@@ -5,9 +5,9 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String)
     description = db.Column(db.String)
-    author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
+    author_id = db.Column(db.Integer, db.ForeignKey("author.id"))
     author = db.relationship("Author", back_populates="books")
-    genres = db.relationship("Genre", secondary="book_genre", backref="books")
+    genres = db.relationship("Genre", secondary="book_genre", back_populates="books")
 
     def to_dict(self):
         book_dict = {
